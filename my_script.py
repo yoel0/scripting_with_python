@@ -23,9 +23,12 @@ file_items = new_file.readlines()
 for i in range(len(file_items)):
     each_item = file_items[i]
     print('Before: {}'.format(each_item))
-    print(each_item[0:-1])
-    file_items[i] = each_item[0:-1]
-    print(file_items)
+    if (i == len(file_items) -1):
+      print(file_items[i])
+    else:
+      print(each_item[0:-1])
+      file_items[i] = each_item[0:-1]
+      print(file_items)
 
 # print(file_items)
 
